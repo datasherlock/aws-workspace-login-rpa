@@ -1,0 +1,140 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Open_Amazon_Workspaces"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="AuthCode" Type="InArgument(x:String)" />
+    <x:Property Name="UserName" Type="InArgument(x:String)" />
+    <x:Property Name="Password" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Open_Amazon_Workspaces_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Open Amazon Workspaces" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open application 'workspaces.exe Amazon'" FileName="C:\Program Files (x86)\Amazon Web Services, Inc\Amazon WorkSpaces\workspaces.exe" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="3d665d76db1e2f2696c8e465cb7f8565" Selector="&lt;wnd app='workspaces.exe' cls='Qt5QWindowIcon' title='Amazon WorkSpaces' /&gt;">
+      <ui:OpenApplication.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <ui:OnImageAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" DisplayName="On image appear 'workspaces.exe Amazon'" sap2010:WorkflowViewState.IdRef="OnImageAppear_2" RepeatForever="False">
+              <ui:OnImageAppear.Body>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="ui:UiElement" Name="UsernameBox" />
+                    </Sequence.Variables>
+                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type into" EmptyField="False" sap2010:WorkflowViewState.IdRef="TypeInto_8" SendWindowMessages="False" SimulateType="False" Text="[&quot;rajanj01[k(tab)][k(tab)]&quot;&amp; UserName &amp; &quot;[k(tab)]&quot; &amp; Password &amp; &quot;[k(tab)]&quot; &amp; AuthCode &amp; &quot;[k(tab)][k(enter)]&quot;]">
+                      <ui:TypeInto.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                      </ui:TypeInto.Target>
+                    </ui:TypeInto>
+                  </Sequence>
+                </Sequence>
+              </ui:OnImageAppear.Body>
+              <ui:OnImageAppear.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+              </ui:OnImageAppear.Image>
+              <ui:OnImageAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+              </ui:OnImageAppear.Target>
+            </ui:OnImageAppear>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenApplication.Body>
+    </ui:OpenApplication>
+    <sads:DebugSymbol.Symbol>d1lDOlxVc2Vyc1xqZXJyYWphblxEb2N1bWVudHNcVWlQYXRoXFBmaXplckFtYXpvbldvcmtzcGFjZUxvZ2luXE9wZW4gQW1hem9uIFdvcmtzcGFjZXMueGFtbAxEA2cOAgEBRQVlGgIBAkWFA0XYAwIBD0W8AUWOAgIBDksLYhYCAQNMDWEgAgEEThFZHAIBB0zIAUzPAQIBBVw7XEACAQZPE1geAgEIUxVXIwIBCVOfAlPOAwIBCg==</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="TypeInto_8" sap:VirtualizedContainerService.HintSize="314,96" />
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="336,220">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_12" sap:VirtualizedContainerService.HintSize="358,344">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OnImageAppear_2" sap:VirtualizedContainerService.HintSize="414,490" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="436,614">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OpenApplication_1" sap:VirtualizedContainerService.HintSize="450,760" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="472,884">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Open_Amazon_Workspaces_1" sap:VirtualizedContainerService.HintSize="512,964" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>

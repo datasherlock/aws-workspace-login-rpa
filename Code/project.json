@@ -1,0 +1,14 @@
+{
+  "name": "PfizerAmazonWorkspaceLogin",
+  "description": "Login to Amazon Workspaces Environment",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "17.1.6522.14204",
+  "projectVersion": "1.0.6921.17286",
+  "packOptions": {},
+  "runtimeOptions": {}
+}
